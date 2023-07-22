@@ -1,3 +1,4 @@
-const welcome = (name: string) => `Hello, to ${name}!`;
-  
-console.log(welcome('RS'));
+const welcome = (name: string) => `Welcome, to ${name}!`;
+
+const element = <HTMLElement>document.getElementById('app');
+element.innerHTML = welcome('RS')
