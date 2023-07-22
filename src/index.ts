@@ -1,4 +1,9 @@
-const welcome = (name: string) => `Welcome, to ${name}!`;
+import './index.scss';
 
-const element = <HTMLElement>document.getElementById('app');
-element.innerHTML = welcome('RS');
+const element: HTMLElement | null = document.getElementById('app');
+if (element) {
+  const logo: HTMLImageElement = new Image();
+  const welcome = 'Welcome to RS School ';
+  logo.src = './rs-logo.jpeg';
+  element.append(logo, welcome);
+}
